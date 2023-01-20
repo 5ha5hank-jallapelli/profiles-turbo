@@ -1,0 +1,14 @@
+<main class="md:container mx-auto px-3">
+    <div class="profiles">
+        <%= turbo_frame_tag "profiles", class: 'grid gap-[20px] grid-cols-[repeat(auto-fit,_minmax(0,_200px))]
+        my-[50px] max-w-[1120px] mx-auto p-[20px] rounded-[16px]' do %>
+            <%= render @profiles %>
+            <%= turbo_frame_tag 'new-profile', class: "profile shadow-lg bg-white rounded-[16px] overflow-hidden" do %>
+                <%= link_to new_profile_path,
+                    class: 'w-full block h-full flex items-center justify-center' do %>
+                    <%= image_tag "icons/illus-add-profile.png", size: '50x50' %>
+                <% end %>
+            <% end %>
+        <% end %>
+    </div>
+</main>

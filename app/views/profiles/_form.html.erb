@@ -1,0 +1,18 @@
+<%= form_for profile, html: { class: 'max-w-[200px] h-full relative px-[15px] py-[25px]'} do |f| %>
+    <div class="form-group mb-5">
+        <%= f.file_field :image, class: 'form-control text-[12px]' %>
+    </div>
+    <div class="form-group mb-2">
+        <%= f.text_field :name, input_html: { autofocus: true }, placeholder: 'Name',
+        class: 'form-control block w-full px-3 py-2 text-base font-normal text-gray-700 bg-white bg-clip-padding border-0 border-b border-solid border-gray-300 rounded-[2px]
+        transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-transparent focus:border-b-blue-600 focus:outline-none' %>
+    </div>
+    <div class="form-group mb-2">
+        <%= f.text_field :contact_no, placeholder: 'Phone Number',
+        class: 'block w-full px-3 py-2 text-base font-normal text-gray-700 bg-white bg-clip-padding border-0 border-b border-solid border-gray-300 rounded-[2px]
+        transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-transparent focus:border-b-blue-600 focus:outline-none' %>
+    </div>
+
+
+    <%= f.submit class: "bg-blue-700 py-[5px] px-[8px] rounded-[4px] text-white mt-5 absolute left-[15px] bottom-[25px]" %>
+<% end %>

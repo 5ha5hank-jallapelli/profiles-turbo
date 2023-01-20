@@ -1,0 +1,5 @@
+<main class="md:container mx-auto">
+    <%= turbo_frame_tag @profile do %>
+        <%= render "form", profile: @profile %>
+    <% end %>
+</main>

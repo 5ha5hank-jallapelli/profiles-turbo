@@ -1,0 +1,2 @@
+<%= turbo_stream.prepend "profiles", partial: "profiles/profile", locals: { profile: @profile } %>
+<%= turbo_stream.replace "new-profile", partial: 'profiles/add_new_profile' %>

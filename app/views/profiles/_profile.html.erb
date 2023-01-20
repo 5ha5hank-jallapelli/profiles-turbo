@@ -1,0 +1,23 @@
+<%= turbo_frame_tag profile do %>
+    <div class="profile shadow-lg bg-white rounded-[16px] overflow-hidden relative">
+        <div class="layer absolute top-0 left-0 w-full h-full bg-[rgba(255,255,255,0.8)] flex gap-[20px] items-center justify-center z-10">
+            <%= link_to profile_path(profile), title: 'View', data: { turbo_frame: "_top" } do %>
+                <%= image_tag "icons/view.png", size: '24x24' %>
+            <% end %>
+            <%= link_to edit_profile_path(profile), title: 'Edit' do %>
+                <%= image_tag "icons/edit.png", size: '24x24' %>
+            <% end %>
+            <%= button_to profile_path(profile),
+                method: :delete, class: 'flex v-center', title: 'Delete' do %>
+                <%= image_tag "icons/delete.png", size: '24x24' %>
+            <% end %>
+        </div>
+        <% if profile.image.attached? %>
+            <%= image_tag profile.image, class: "w-[200px] h-[200px] block border-b-2 border-black" %>
+        <% end %>
+        <div class="wrapper px-3 py-5">
+            <h4 class="border-b border-gray-200 pb-2 mb-2"><%= profile.name%></h4>
+            <h6 class="font-[300] italic"><%= profile.contact_no %></h6>
+        </div>
+    </div>
+<% end %>

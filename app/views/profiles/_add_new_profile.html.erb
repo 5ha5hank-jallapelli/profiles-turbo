@@ -1,0 +1,6 @@
+<%= turbo_frame_tag "add-new-profile", class: "profile shadow-lg bg-white rounded-[16px] overflow-hidden" do %>
+    <%= link_to new_profile_path,
+        class: 'w-full block h-full flex items-center justify-center' do %>
+        <%= image_tag "icons/illus-add-profile.png", size: '50x50' %>
+    <% end %>
+<% end %>

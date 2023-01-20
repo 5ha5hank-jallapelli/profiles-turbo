@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Kanit', sans-serif;
+    background-color: black;
+}
+
+.profiles .profile .layer {
+    opacity: 0;
+    z-index: 0;
+    transition: opacity 0.2s linear;
+}
+
+.profiles .profile {
+    min-height: 305px;
+}
+
+.profiles .grid {
+    background-image: url('/assets/icons/background-75b58d9d8658ec7157bacfa3944d48f98c5f3a4e18df7cb92979f79aff30d791.webp');
+    background-repeat: repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.profiles .profile:hover .layer {
+    opacity: 1;
+    z-index: 10;
+}
